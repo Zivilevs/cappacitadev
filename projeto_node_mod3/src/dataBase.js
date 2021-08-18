@@ -73,8 +73,7 @@ function batalhaPokemon(id1, id2) {
 function receberPocao(id) {
     const pocao = 20
     const pokemonCuidado = pokemons[id]
-    const hpAntigo = pokemonCuidado.hp
-
+    
     if (pokemonCuidado.hp == 100) {
         return `${pokemonCuidado.nome} pediu uma poção, mas HP dele já está 100!`
     } else if ((100 - pokemonCuidado.hp) <= 20) {
