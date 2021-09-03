@@ -1,0 +1,20 @@
+npm run dev OR node start in the main project file ('projeto_node_mod3')
+
+if EADDRINUSE -> $ lsof -i:3003 -> kill -9 PID
+
+--install knex.js and mysql
+npm i knex
+npm i mysql
+
+--mysql package has not yet compatibility with new autentication in MySql 8.
+npm un mysql && npm i mysql2
+
+
+# Secure your credentials, password etc.
+
+1. npm install dotenv
+2. create .env file with MYSECRET='senha'
+3. in the file you use the MYSECRET add
+        require('dotenv').config();
+        // .config({path: patth-to-.env, if not the same dir})
+4. .gitignore -> */*.env
